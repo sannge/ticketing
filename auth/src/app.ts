@@ -19,7 +19,8 @@ app.use(json());
 app.use(
   cookieSession({
     signed: false, //we are not encrypting the value inside cookie because the value is jwt, which is already encrypted
-    secure: process.env.NODE_ENV !== 'test', //only valid for https requests
+    // secure: process.env.NODE_ENV !== 'test', //only valid for https requests
+    secure: false,
   })
 );
 
